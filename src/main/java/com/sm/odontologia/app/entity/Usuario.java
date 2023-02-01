@@ -24,6 +24,7 @@ import java.util.Set;
 public class Usuario implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_usuario;
