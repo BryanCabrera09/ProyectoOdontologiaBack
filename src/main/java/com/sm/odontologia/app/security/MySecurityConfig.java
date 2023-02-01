@@ -61,7 +61,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
 		http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);*/
-		web.ignoring().antMatchers("/swagger-ui/**", " /v3/api-docs/**");
+		web.ignoring().antMatchers("/generate-token", "/usuarios/", "/swagger-ui/**", " /v3/api-docs/**");
 	}
 
 }

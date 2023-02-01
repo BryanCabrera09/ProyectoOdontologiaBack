@@ -74,7 +74,7 @@ public class UserController {
 				// SE COMPRUEBA QUE ESTE REGISTRADO EN LA BD DEL PACIENTE
 				//if (alumnoFenix.existsByCedula(usuario.getUsername())) {
 
-					rol.setRolId(4L);
+					//rol.setRolId(1L);
 					rol.setRolNombre("PACIENTE");
 					usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
 					UsuarioRol usuarioRol = new UsuarioRol();
