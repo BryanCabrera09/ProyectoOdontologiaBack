@@ -7,13 +7,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.sm.odontologia.app.entity.Usuario;
-import com.sm.odontologia.app.repository.IUsuariosRepositoryDao;
+import com.sm.odontologia.app.repository.IUsuarioDao;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
-	private IUsuariosRepositoryDao usuarioRepository;
+	private IUsuarioDao usuarioRepository;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

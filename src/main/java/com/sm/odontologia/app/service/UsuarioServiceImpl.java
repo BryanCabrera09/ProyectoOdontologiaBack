@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 
 import com.sm.odontologia.app.entity.Usuario;
 import com.sm.odontologia.app.entity.UsuarioRol;
-import com.sm.odontologia.app.repository.IRolRepositoryDao;
-import com.sm.odontologia.app.repository.IUsuariosRepositoryDao;
+import com.sm.odontologia.app.repository.IRolDao;
+import com.sm.odontologia.app.repository.IUsuarioDao;
 
 @Service
 public class UsuarioServiceImpl implements IUsuarioService {
 
 	@Autowired
-	private IUsuariosRepositoryDao UsuarioDao;
+	private IUsuarioDao UsuarioDao;
 
 	@Autowired
-	private IRolRepositoryDao rolRepository;
+	private IRolDao rolRepository;
 
 	@Override
 	public Usuario save(Usuario usuario, Set<UsuarioRol> usuarioRoles) throws Exception {

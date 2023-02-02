@@ -13,14 +13,13 @@ import org.springframework.web.bind.annotation.*;
 import com.sm.odontologia.app.entity.JwtRequest;
 import com.sm.odontologia.app.entity.JwtResponse;
 import com.sm.odontologia.app.entity.Usuario;
-import com.sm.odontologia.app.repository.IRolRepositoryDao;
-import com.sm.odontologia.app.repository.IUsuariosRepositoryDao;
+import com.sm.odontologia.app.repository.IRolDao;
+import com.sm.odontologia.app.repository.IUsuarioDao;
 import com.sm.odontologia.app.security.JwtUtils;
 import com.sm.odontologia.app.service.IUsuarioService;
 import com.sm.odontologia.app.service.UserDetailsServiceImpl;
 
 import java.security.Principal;
-import java.util.List;
 
 @RestController
 @CrossOrigin("*")
@@ -32,10 +31,10 @@ public class AuthCtrl {
 	private UserDetailsServiceImpl userDetailsService;
 
 	@Autowired
-	IUsuariosRepositoryDao userRepository;
+	IUsuarioDao userRepository;
 
 	@Autowired
-	IRolRepositoryDao roleRepository;
+	IRolDao roleRepository;
 
 	@Autowired
 	PasswordEncoder passwordEncoder;

@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -29,52 +28,44 @@ public class Persona implements Serializable {
 	private Long id_persona;
 
 	@Size(min = 10, max = 10, message = "Cedula longitud maxima permitida 10 caracteres")
-	@NotNull(message = "Cedula no puede ser nulo")
-	@Column(name = "cedula")
+	@Column(name = "cedula", nullable = false)
 	private String cedula;
 
-	@Size(max = 45, message = "Nombre longitud maxima permitida 45 caracteres")
-	@NotNull(message = "Nombre no puede ser nulo")
-	@Column(name = "nombre")
+	@Column(name = "nombre", length = 45, nullable = false)
 	private String nombre;
 
-	@Size(max = 45, message = "Apellido longitud maxima permitida 45 caracteres")
-	@NotNull(message = "Apellido no puede ser nulo")
-	@Column(name = "apellido")
+	@Column(name = "apellido", length = 45, nullable = false)
 	private String Apellido;
 
-	@Size(max = 45, message = "Correo longitud maxima permitida 45 caracteres")
-	@NotNull(message = "Correo no puede ser nulo")
-	@Column(name = "email")
+	@Column(name = "email", length = 50, nullable = false)
 	private String email;
 
-	@NotNull(message = "Fecha de Nacimiento no puede ser nulo")
-	@Column(name = "fecha_nacimiento")
+	@Column(name = "fecha_nacimiento", nullable = false)
 	private Date fechaNac;
 
-	@NotNull(message = "Genero no puede ser nulo")
-	@Column(name = "genero")
+	@Column(name = "genero", nullable = false)
 	private String genero;
 
 	@Size(min = 10, max = 10, message = "Celular longitud maxima permitida 10 caracteres")
-	@NotNull(message = "Celular no puede ser nulo")
-	@Column(name = "celular")
+	@Column(name = "celular", nullable = false)
 	private String celular;
 
-	@Size(max = 50, message = "Direccion longitud maxima permitida 50 caracteres")
-	@NotNull(message = "Direccion no puede ser nulo")
-	@Column(name = "direccion")
+	@Column(name = "direccion", length = 50, nullable = false)
 	private String direccion;
 
 	@Size(min = 9, max = 10, message = "Telefono longitud maxima permitida 10 caracteres")
-	@NotNull(message = "Telefono no puede ser nulo")
-	@Column(name = "telefono")
+	@Column(name = "telefono", nullable = false)
 	private String telefono;
-
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "persona")
 	private List<Paciente> paciente;
 
+	@JsonIgnore
+	@OneToMany(mappedBy = "persona")
+	private List<Odontologo> odontologo;
+
+	@OneToOne(mappedBy = "persona")
+	private Usuario usuario;
 
 }

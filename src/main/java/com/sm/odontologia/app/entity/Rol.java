@@ -21,7 +21,9 @@ public class Rol {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long rolId;
+	
 	private String rolNombre;
+	
 	private String descripcion;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "rol")
