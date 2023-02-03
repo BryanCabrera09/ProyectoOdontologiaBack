@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "OdontoFicha")
+@Table(name = "odontoficha")
 public class Ficha_odontologica implements Serializable {
     private static final long serialVersionUID = -3475904368250184896L;
     @Id
