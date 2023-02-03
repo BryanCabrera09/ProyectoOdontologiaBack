@@ -29,7 +29,7 @@ public class UserController {
 	private IUsuarioService usuarioService;
 
 	@GetMapping("/users/all")
-	@PreAuthorize("hasRole('RESPONSABLE')")
+	@PreAuthorize("hasAuthority('ADMIN')")
 	public ResponseEntity<List<Usuario>> getUsuarios() {
 		return ResponseEntity.ok().body(usuarioService.getUsuarios());
 	}

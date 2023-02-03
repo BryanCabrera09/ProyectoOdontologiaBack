@@ -10,7 +10,7 @@ import com.sm.odontologia.app.entity.Odontologo;
 import com.sm.odontologia.app.repository.IOdontologoDao;
 
 @Service
-public class OdontologoServiceImpl extends GenericServiceImpl<Odontologo, Long> implements IOdotologoService {
+public class OdontologoServiceImpl extends GenericServiceImpl<Odontologo, Long> implements IOdontologoService {
 
 	@Autowired
 	IOdontologoDao odontologoRepository;

@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -34,7 +33,6 @@ public class Usuario implements UserDetails {
 	@Column(name = "username", length = 25, nullable = false)
 	private String username;
 
-	@Size(min = 6, max = 25, message = "Contraseña longitud maxima permitida 10 caracteres")
 	@Column(name = "password", nullable = false)
 	private String password;
 

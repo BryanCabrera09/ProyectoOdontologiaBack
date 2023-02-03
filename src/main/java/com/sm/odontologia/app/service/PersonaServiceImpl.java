@@ -21,4 +21,10 @@ public class PersonaServiceImpl extends GenericServiceImpl<Persona, Long> implem
 	public Persona buscarCedula(String cedula) {
 		return personaRepository.findByCedula(cedula);
 	}
+
+	@Override
+	public Persona search(String cedula) {
+		
+		return personaRepository.findByCedula(cedula);
+	}
 }
