@@ -21,10 +21,13 @@ public class Rol {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long rolId;
-	
+
 	private String rolNombre;
-	
+
 	private String descripcion;
+
+	@OneToOne(mappedBy = "rol")
+	private Usuario usuario;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "rol")
 	private Set<UsuarioRol> usuarioRoles = new HashSet<>();

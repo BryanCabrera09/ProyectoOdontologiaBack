@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -26,7 +28,7 @@ public class Pieza implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_persona;
+	private Long id_pieza;
 
 	@Column(name = "superior", length = 10, nullable = false)
 	private String superior;
@@ -42,4 +44,8 @@ public class Pieza implements Serializable {
 
 	@Column(name = "centro", length = 10, nullable = false)
 	private String centro;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_odontograma", referencedColumnName = "id_odontograma")
+	private Odontograma odontograma;
 }
