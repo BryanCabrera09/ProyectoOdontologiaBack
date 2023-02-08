@@ -20,7 +20,7 @@ public class OdontologoServiceImpl extends GenericServiceImpl<Odontologo, Long> 
 		return odontologoRepository;
 	}
 
-	public List<Odontologo> buscarPieza(Long id) {
+	public List<Odontologo> buscarOdontologo(Long id) {
 		return odontologoRepository.buscarOdontologo(id);
 	}
 }
