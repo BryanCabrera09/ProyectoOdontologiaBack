@@ -35,7 +35,7 @@ public class Persona implements Serializable {
 	private String nombre;
 
 	@Column(name = "apellido", length = 45, nullable = false)
-	private String Apellido;
+	private String apellido;
 
 	@Column(name = "email", length = 50, nullable = false)
 	private String email;
