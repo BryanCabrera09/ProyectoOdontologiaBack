@@ -28,9 +28,6 @@ public class Ficha_odontologica implements Serializable {
 	@Column(name = "diagnostico", length = 100, nullable = false)
 	private String diagnostico;
 
-	@Column(name = "observaciones", length = 50, nullable = false)
-	private String observaciones;
-
 	@Column(name = "fecha_consulta", nullable = false)
 	private Date fecha_consulta;
 
@@ -38,25 +35,14 @@ public class Ficha_odontologica implements Serializable {
 	private String motivo_consulta;
 
 	@Column(name = "antecedentes", length = 100, nullable = false)
-	private String antecedentes;
-
-	@Column(name = "examenes", length = 100, nullable = false)
-	private String examenes;
+	private String observaciones;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "fichaOdontologica")
 	private List<Odontograma> odontograma;
 
 	@ManyToOne
-	@JoinColumn(name = "id_paciente", referencedColumnName = "id_paciente")
-	private Paciente paciente;
-
-	@ManyToOne
-	@JoinColumn(name = "id_odontologo", referencedColumnName = "id_odontologo")
-	private Odontologo odontologo;
-
-	@ManyToOne
-	@JoinColumn(name = "id_tratamiento", referencedColumnName = "id_tratamiento")
-	private Tratamiento tratamiento;
+	@JoinColumn(name = "id_persona", referencedColumnName = "id_persona")
+	private Persona persona;
 
 }

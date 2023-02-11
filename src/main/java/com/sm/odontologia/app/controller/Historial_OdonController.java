@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping("/api/historialOdontograma")
 public class Historial_OdonController {
 
-
     @Autowired
     IHistorial_OdontogramaService historialOdontogramaService;
 

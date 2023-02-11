@@ -30,21 +30,15 @@ public class Pieza implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_pieza;
 
-	@Column(name = "superior", length = 10, nullable = false)
-	private String superior;
+	@Column(name = "numero_pieza", length = 10, nullable = false)
+	private String numero_pieza;
 
-	@Column(name = "inferior", length = 10, nullable = false)
-	private String inferior;
+	@Column(name = "cara_pieza", length = 15, nullable = false)
+	private String cara_pieza;
 
-	@Column(name = "izquierda", length = 10, nullable = false)
-	private String izquierda;
+	@Column(name = "tratamiento", length = 30, nullable = false)
+	private String tratamiento;
 
-	@Column(name = "derecha", length = 10, nullable = false)
-	private String derecha;
-
-	@Column(name = "centro", length = 10, nullable = false)
-	private String centro;
-	
 	@ManyToOne
 	@JoinColumn(name = "id_odontograma", referencedColumnName = "id_odontograma")
 	private Odontograma odontograma;

@@ -10,17 +10,17 @@ import java.util.List;
 
 @Service
 public class OdontogramaServiceImpl extends GenericServiceImpl<Odontograma, Long> implements IOdontogramaService {
-    @Autowired
-    IOdontogramaDao odontogramaRepository;
 
+	@Autowired
+	IOdontogramaDao odontogramaRepository;
 
-    @Override
-    public CrudRepository<Odontograma, Long> getDao() {
-        return odontogramaRepository;
+	@Override
+	public CrudRepository<Odontograma, Long> getDao() {
+		return odontogramaRepository;
 
-    }
+	}
 
-    public List<Odontograma> buscarOdontograma(Long id) {
-        return odontogramaRepository.buscarOdontograma(id);
-    }
+	public List<Odontograma> buscarOdontograma(Long id) {
+		return odontogramaRepository.buscarOdontograma(id);
+	}
 }

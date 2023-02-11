@@ -74,11 +74,9 @@ public class PiezaController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else {
 			try {
-				pieza.setSuperior(p.getSuperior());
-				pieza.setInferior(p.getInferior());
-				pieza.setIzquierda(p.getIzquierda());
-				pieza.setDerecha(p.getDerecha());
-				pieza.setCentro(p.getCentro());
+				pieza.setNumero_pieza(p.getNumero_pieza());
+				pieza.setCara_pieza(p.getCara_pieza());
+				pieza.setTratamiento(p.getTratamiento());
 				return new ResponseEntity<>(piezaService.save(pieza), HttpStatus.CREATED);
 			} catch (Exception e) {
 				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -46,8 +46,8 @@ public class Usuario implements UserDetails {
 	@JoinColumn(name = "rolId")
 	private Rol rol;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "usuario")
 	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "usuario")
 	private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
 	@Override

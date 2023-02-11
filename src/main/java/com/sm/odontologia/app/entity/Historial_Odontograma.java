@@ -16,18 +16,18 @@ import java.io.Serializable;
 @Table(name = "historialOdontograma")
 public class Historial_Odontograma implements Serializable {
 
-    private static final long serialVersionUID = -8521249714562072921L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_historialOdonto;
+	private static final long serialVersionUID = -8521249714562072921L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id_historialOdonto;
 
-    @ManyToOne
-    @JoinColumn(name = "id_odontograma", referencedColumnName = "id_odontograma")
-    private Odontograma odontograma;
+	@ManyToOne
+	@JoinColumn(name = "id_odontograma", referencedColumnName = "id_odontograma")
+	private Odontograma odontograma;
 
-    @ManyToOne
-    @JoinColumn(name = "id_ficha", referencedColumnName = "id_ficha")
-    private Ficha_odontologica fichaOdontologica;
-
+	@ManyToOne
+	@JoinColumn(name = "id_ficha", referencedColumnName = "id_ficha")
+	private Ficha_odontologica fichaOdontologica;
 
 }

@@ -9,15 +9,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class Historial_OdontogramaServiceImpl extends GenericServiceImpl<Historial_Odontograma,Long> implements IHistorial_OdontogramaService{
-    @Autowired
-    IHistorial_OdontogramaDao historialOdontoRepository;
-    @Override
-    public CrudRepository<Historial_Odontograma, Long> getDao() {
-        return historialOdontoRepository;
-    }
+public class Historial_OdontogramaServiceImpl extends GenericServiceImpl<Historial_Odontograma, Long>
+		implements IHistorial_OdontogramaService {
 
-    public List<Historial_Odontograma>buscarHistorialO(Long id){
-        return historialOdontoRepository.buscarHistorialOdonto(id);
-    }
+	@Autowired
+	IHistorial_OdontogramaDao historialOdontoRepository;
+
+	@Override
+	public CrudRepository<Historial_Odontograma, Long> getDao() {
+		return historialOdontoRepository;
+	}
+
+	public List<Historial_Odontograma> buscarHistorialO(Long id) {
+		return historialOdontoRepository.buscarHistorialOdonto(id);
+	}
 }
