@@ -24,6 +24,7 @@ import java.security.Principal;
 @RestController
 @CrossOrigin("*")
 public class AuthCtrl {
+	
 	@Autowired
 	AuthenticationManager authenticationManager;
 

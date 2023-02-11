@@ -36,7 +36,7 @@ public class Pieza implements Serializable {
 	@Column(name = "cara_pieza", length = 15, nullable = false)
 	private String cara_pieza;
 
-	@Column(name = "tratamiento", length = 30, nullable = false)
+	@Column(name = "nombre_tratamiento", length = 30, nullable = false)
 	private String tratamiento;
 
 	@ManyToOne
