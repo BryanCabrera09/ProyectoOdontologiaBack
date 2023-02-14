@@ -60,9 +60,9 @@ public class Persona implements Serializable {
 	@JsonIgnore
 	@OneToMany(mappedBy = "persona")
 	private List<Ficha_odontologica> ficha_odontologica;
-
-	@JsonIgnore
-	@OneToOne(mappedBy = "persona")
-	private Usuario usuario;
+//
+//	@JsonIgnore
+//	@OneToOne(mappedBy = "persona")
+//	private Usuario usuario;
 
 }
