@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -24,10 +25,7 @@ public class Odontograma implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_odontograma;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "odontograma")
-	private List<Historial_Odontograma> historialOdontograma;
-
+	private Date fecha_creacion;
 	@ManyToOne
 	@JoinColumn(name = "id_ficha", referencedColumnName = "id_ficha")
 	private Ficha_odontologica fichaOdontologica;
