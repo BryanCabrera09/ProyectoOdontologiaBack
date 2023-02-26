@@ -1,6 +1,7 @@
 package com.sm.odontologia.app.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -57,9 +58,10 @@ public class Persona implements Serializable {
 	@Column(name = "telefono", nullable = false)
 	private String telefono;
 
+
+	@OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
 	@JsonIgnore
-	@OneToMany(mappedBy = "persona")
-	private List<Ficha_odontologica> ficha_odontologica;
+	private List<Ficha_odontologica> ficha_odontologica = new ArrayList<>();
 //
 //	@JsonIgnore
 //	@OneToOne(mappedBy = "persona")

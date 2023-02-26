@@ -3,12 +3,13 @@ package com.sm.odontologia.app.repository;
 import com.sm.odontologia.app.entity.Ficha_odontologica;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
 public interface IFicha_OdontologicaDao extends JpaRepository<Ficha_odontologica, Long> {
 
-    @Query(value = "Select * from odontoficha o where o.id_ficha = ?", nativeQuery = true)
-    List<Ficha_odontologica>buscarFicha(Long id_ficha);
+    @Query(value = "Select id_ficha,diagnostico,fecha_consulta,motivo_consulta,observaciones,p.id_persona from odontoficha o join persona p on p.id_persona=o.id_persona where o.id_persona = ?", nativeQuery = true)
+    Ficha_odontologica buscarFicha(@Param("id_persona") Long id_persona);
 
 }

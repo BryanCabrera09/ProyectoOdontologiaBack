@@ -34,7 +34,7 @@ public class Ficha_odontologica implements Serializable {
 	@Column(name = "motivo_consulta", length = 100, nullable = false)
 	private String motivo_consulta;
 
-	@Column(name = "antecedentes", length = 100, nullable = false)
+	@Column(name = "observaciones", length = 100, nullable = false)
 	private String observaciones;
 
 	@JsonIgnore
@@ -42,7 +42,7 @@ public class Ficha_odontologica implements Serializable {
 	private List<Odontograma> odontograma;
 
 	@ManyToOne
-	@JoinColumn(name = "id_persona", referencedColumnName = "id_persona")
+	@JoinColumn(name = "id_persona")
 	private Persona persona;
 
 }
