@@ -1,71 +1,118 @@
-2023-02-11 00:38:01.382  INFO 4184 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 4184 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:38:01.387  INFO 4184 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:38:01.440  INFO 4184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:38:01.441  INFO 4184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:38:01.641  WARN 4184 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:38:01.722 ERROR 4184 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2023-02-15 00:03:29.464  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-02-15 00:03:29.911  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-15 00:03:29.932  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-15 00:03:30.039  WARN 4520 --- [RMI TCP Connection(154)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot serialize session attribute [SPRING_SECURITY_CONTEXT] for session [2E2397513C9B9FDA6009BAD8117157B8]
 
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
+java.io.NotSerializableException: com.sm.odontologia.app.entity.UsuarioRol
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1197) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[na:na]
+	at java.base/java.util.HashMap.internalWriteEntries(HashMap.java:1943) ~[na:na]
+	at java.base/java.util.HashMap.writeObject(HashMap.java:1497) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1201) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1526) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1582) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1539) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1582) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1539) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1582) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1539) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1582) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1539) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doWriteObject(StandardSession.java:1761) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:1067) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:317) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:268) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:384) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5459) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1409) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1398) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:983) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1409) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1398) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:983) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:495) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.stop(WebServerStartStopLifecycle.java:52) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.context.SmartLifecycle.stop(SmartLifecycle.java:117) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:234) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:373) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:206) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:129) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1067) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-2.7.8.jar:2.7.8]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:72) ~[na:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor42.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:262) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:117) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:54) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:237) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor41.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2023-02-11 00:41:59.710  INFO 6400 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 6400 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:41:59.712  INFO 6400 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:41:59.764  INFO 6400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:41:59.764  INFO 6400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:42:00.494  INFO 6400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-11 00:42:00.566  INFO 6400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 7 JPA repository interfaces.
-2023-02-11 00:42:01.143  INFO 6400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-11 00:42:01.152  INFO 6400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-11 00:42:01.153  INFO 6400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-02-11 00:42:01.227  INFO 6400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-11 00:42:01.227  INFO 6400 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1462 ms
-2023-02-11 00:42:01.359  INFO 6400 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-11 00:42:01.410  INFO 6400 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
-2023-02-11 00:42:01.553  INFO 6400 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-11 00:42:01.640  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-11 00:42:01.848  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-11 00:42:01.866  INFO 6400 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-11 00:42:02.023 ERROR 6400 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-2023-02-11 00:42:02.024 ERROR 6400 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'usuarioRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUsuarioDao' defined in com.sm.odontologia.app.repository.IUsuarioDao defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#614770a3' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#614770a3': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-2023-02-11 00:42:02.056  INFO 6400 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-02-11 00:42:02.062  WARN 6400 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-02-15 00:03:30.083  WARN 4520 --- [RMI TCP Connection(154)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
  java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
@@ -75,558 +122,46 @@ Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologi
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
-2023-02-11 00:42:02.063  WARN 6400 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
- java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
- java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
- java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
- java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
-2023-02-11 00:42:02.064  WARN 6400 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-2023-02-11 00:42:02.066  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-02-11 00:42:02.073  INFO 6400 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-02-11 00:42:02.081  INFO 6400 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-11 00:42:02.103 ERROR 6400 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.7.8.jar:2.7.8]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'usuarioRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUsuarioDao' defined in com.sm.odontologia.app.repository.IUsuarioDao defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#614770a3' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#614770a3': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5211) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:430) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.71.jar:9.0.71]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.7.8.jar:2.7.8]
-	... 18 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl': Unsatisfied dependency expressed through field 'usuarioRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUsuarioDao' defined in com.sm.odontologia.app.repository.IUsuarioDao defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#614770a3' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#614770a3': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 60 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IUsuarioDao' defined in com.sm.odontologia.app.repository.IUsuarioDao defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#614770a3' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#614770a3': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:389) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 74 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#614770a3': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 87 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 95 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.sm.odontologia.app.entity.Ficha_odontologica.tratamiento in com.sm.odontologia.app.entity.Tratamiento.ficha
-	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:875) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:826) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1629) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.25.jar:5.3.25]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.25.jar:5.3.25]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.25.jar:5.3.25]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.25.jar:5.3.25]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 102 common frames omitted
-
-2023-02-11 00:43:19.254  INFO 19248 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 19248 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:43:19.255  INFO 19248 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:43:19.307  INFO 19248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:43:19.308  INFO 19248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:43:19.500  WARN 19248 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:43:19.570 ERROR 19248 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:51:04.522  INFO 2696 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 2696 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:51:04.526  INFO 2696 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:51:04.588  INFO 2696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:51:04.588  INFO 2696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:51:04.790  WARN 2696 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:51:04.847 ERROR 2696 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:51:15.800  INFO 19060 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 19060 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:51:15.801  INFO 19060 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:51:15.860  INFO 19060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:51:15.860  INFO 19060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:51:16.061  WARN 19060 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:51:16.136 ERROR 19060 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:51:38.923  INFO 15640 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 15640 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:51:38.924  INFO 15640 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:51:38.977  INFO 15640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:51:38.978  INFO 15640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:51:39.171  WARN 15640 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:51:39.254 ERROR 15640 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:52:24.360  INFO 1708 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 1708 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:52:24.362  INFO 1708 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:52:24.416  INFO 1708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:52:24.416  INFO 1708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:52:24.599  WARN 1708 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:52:24.674 ERROR 1708 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:53:46.079  INFO 16060 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 16060 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:53:46.080  INFO 16060 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:53:46.136  INFO 16060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:53:46.137  INFO 16060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:53:46.315  WARN 16060 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:53:46.397 ERROR 16060 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:54:43.726  INFO 18260 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 18260 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:54:43.730  INFO 18260 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:54:43.789  INFO 18260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:54:43.789  INFO 18260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:54:43.960  WARN 18260 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:54:44.043 ERROR 18260 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:55:56.405  INFO 17328 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 17328 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:55:56.406  INFO 17328 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:55:56.458  INFO 17328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:55:56.459  INFO 17328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:55:56.635  WARN 17328 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-2023-02-11 00:55:56.709 ERROR 17328 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sm.odontologia.app.OdontProjectApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
-	at com.sm.odontologia.app.OdontProjectApplication.main(OdontProjectApplication.java:11) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
-Caused by: java.io.FileNotFoundException: class path resource [com/sm/odontologia/app/service/ITratamientoService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.8.jar:2.7.8]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.25.jar:5.3.25]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.25.jar:5.3.25]
-	... 18 common frames omitted
-
-2023-02-11 00:57:48.565  INFO 13680 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 13680 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
-2023-02-11 00:57:48.567  INFO 13680 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-02-11 00:57:48.613  INFO 13680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-02-11 00:57:48.613  INFO 13680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-02-11 00:57:49.335  INFO 13680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-11 00:57:49.411  INFO 13680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
-2023-02-11 00:57:50.080  INFO 13680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-02-11 00:57:50.093  INFO 13680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-11 00:57:50.094  INFO 13680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-02-11 00:57:50.185  INFO 13680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-11 00:57:50.185  INFO 13680 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1571 ms
-2023-02-11 00:57:50.355  INFO 13680 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-11 00:57:50.419  INFO 13680 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
-2023-02-11 00:57:50.587  INFO 13680 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-02-11 00:57:50.691  INFO 13680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-11 00:57:50.845  INFO 13680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-11 00:57:50.877  INFO 13680 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-11 00:57:51.701 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup
-2023-02-11 00:57:51.733  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup" via JDBC Statement
+2023-02-15 00:03:30.194  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-15 00:03:30.259  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-15 00:03:30.284 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup
+2023-02-15 00:03:30.308 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib
+2023-02-15 00:03:30.316 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1
+2023-02-15 00:03:30.324 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir
+2023-02-15 00:03:30.332 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022
+2023-02-15 00:03:30.338 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9
+2023-02-15 00:03:30.363 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq
+2023-02-15 00:03:30.371 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc
+2023-02-15 00:03:30.378 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw
+2023-02-15 00:03:30.385 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists historial_odontograma
+2023-02-15 00:03:30.406 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists odontoficha
+2023-02-15 00:03:30.409 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists odontograma
+2023-02-15 00:03:30.413 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists persona
+2023-02-15 00:03:30.416 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists pieza
+2023-02-15 00:03:30.419 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists roles
+2023-02-15 00:03:30.422 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists usuario
+2023-02-15 00:03:30.425 DEBUG 4520 --- [RMI TCP Connection(154)-127.0.0.1] org.hibernate.SQL                        : drop table if exists usuario_rol
+2023-02-15 00:03:30.504  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-15 00:03:30.507  INFO 4520 --- [RMI TCP Connection(154)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-15 09:42:52.466  INFO 9520 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Starting OdontProjectApplication using Java 17.0.3 on BRA-015-YAN-026 with PID 9520 (C:\M4A_SPRING\Spring_M5A_Projects\OdontProject\target\classes started by BRYAN_CABRERA in C:\M4A_SPRING\Spring_M5A_Projects\OdontProject)
+2023-02-15 09:42:52.468  INFO 9520 --- [restartedMain] c.s.o.app.OdontProjectApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-02-15 09:42:52.582  INFO 9520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-15 09:42:52.582  INFO 9520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-15 09:42:54.166  INFO 9520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-15 09:42:54.284  INFO 9520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 7 JPA repository interfaces.
+2023-02-15 09:42:55.102  INFO 9520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-15 09:42:55.117  INFO 9520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-15 09:42:55.117  INFO 9520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-15 09:42:55.211  INFO 9520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-15 09:42:55.211  INFO 9520 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2628 ms
+2023-02-15 09:42:55.414  INFO 9520 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-15 09:42:55.494  INFO 9520 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-02-15 09:42:55.700  INFO 9520 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-15 09:42:55.809  INFO 9520 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-15 09:42:56.026  INFO 9520 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-15 09:42:56.043  INFO 9520 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-15 09:42:56.959 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup
+2023-02-15 09:42:57.006  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -761,8 +296,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.historial_odo
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.735 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib
-2023-02-11 00:57:51.739  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib" via JDBC Statement
+2023-02-15 09:42:57.006 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib
+2023-02-15 09:42:57.006  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -897,8 +432,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.historial_odo
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.740 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1
-2023-02-11 00:57:51.741  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1" via JDBC Statement
+2023-02-15 09:42:57.006 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1
+2023-02-15 09:42:57.006  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1033,8 +568,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.odontoficha' 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.742 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir
-2023-02-11 00:57:51.744  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir" via JDBC Statement
+2023-02-15 09:42:57.006 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1169,8 +704,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.odontograma' 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.744 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022
-2023-02-11 00:57:51.745  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022" via JDBC Statement
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1305,8 +840,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.pieza' doesn'
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.746 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9
-2023-02-11 00:57:51.751  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9" via JDBC Statement
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1441,8 +976,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.usuario' does
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.753 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq
-2023-02-11 00:57:51.754  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq" via JDBC Statement
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1577,8 +1112,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.usuario' does
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.755 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc
-2023-02-11 00:57:51.756  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc" via JDBC Statement
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1713,8 +1248,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.usuario_rol' 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.757 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw
-2023-02-11 00:57:51.758  WARN 13680 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw" via JDBC Statement
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw
+2023-02-15 09:42:57.021  WARN 9520 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
@@ -1849,43 +1384,90 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_odontologia.usuario_rol' 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 121 common frames omitted
 
-2023-02-11 00:57:51.759 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists historial_odontograma
-2023-02-11 00:57:51.764 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists odontoficha
-2023-02-11 00:57:51.767 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists odontograma
-2023-02-11 00:57:51.770 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists persona
-2023-02-11 00:57:51.771 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists pieza
-2023-02-11 00:57:51.772 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists roles
-2023-02-11 00:57:51.773 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists usuario
-2023-02-11 00:57:51.775 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : drop table if exists usuario_rol
-2023-02-11 00:57:51.779 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table historial_odontograma (id_historial_odonto bigint not null auto_increment, id_ficha bigint, id_odontograma bigint, primary key (id_historial_odonto)) engine=InnoDB
-2023-02-11 00:57:51.943 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table odontoficha (id_ficha bigint not null auto_increment, diagnostico varchar(100) not null, fecha_consulta datetime(6) not null, motivo_consulta varchar(100) not null, antecedentes varchar(100) not null, id_persona bigint, primary key (id_ficha)) engine=InnoDB
-2023-02-11 00:57:51.973 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table odontograma (id_odontograma bigint not null auto_increment, id_ficha bigint, primary key (id_odontograma)) engine=InnoDB
-2023-02-11 00:57:51.988 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table persona (id_persona bigint not null auto_increment, apellido varchar(45) not null, cedula varchar(10) not null, celular varchar(10) not null, direccion varchar(50) not null, email varchar(50) not null, fecha_nacimiento datetime(6) not null, genero varchar(255) not null, nombre varchar(45) not null, telefono varchar(10) not null, primary key (id_persona)) engine=InnoDB
-2023-02-11 00:57:52.000 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table pieza (id_pieza bigint not null auto_increment, cara_pieza varchar(15) not null, numero_pieza varchar(10) not null, nombre_tratamiento varchar(30) not null, id_odontograma bigint, primary key (id_pieza)) engine=InnoDB
-2023-02-11 00:57:52.020 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table roles (rol_id bigint not null auto_increment, descripcion varchar(255), rol_nombre varchar(255), primary key (rol_id)) engine=InnoDB
-2023-02-11 00:57:52.039 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table usuario (id_usuario bigint not null auto_increment, enabled bit not null, password varchar(255) not null, username varchar(25) not null, id_persona bigint, rol_id bigint, primary key (id_usuario)) engine=InnoDB
-2023-02-11 00:57:52.054 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : create table usuario_rol (usuario_rol_id bigint not null auto_increment, rol_rol_id bigint, usuario_id_usuario bigint, primary key (usuario_rol_id)) engine=InnoDB
-2023-02-11 00:57:52.071 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma add constraint FKk1jimv8lbehrfkqmvdjy5sfup foreign key (id_ficha) references odontoficha (id_ficha)
-2023-02-11 00:57:52.119 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma add constraint FKcum4rgb5r05qot0m1iuojwrib foreign key (id_odontograma) references odontograma (id_odontograma)
-2023-02-11 00:57:52.141 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table odontoficha add constraint FK87f0p93syqsrsj17lagk3gwl1 foreign key (id_persona) references persona (id_persona)
-2023-02-11 00:57:52.258 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table odontograma add constraint FKimymlpi6ag8bbnx4xbkjo3sir foreign key (id_ficha) references odontoficha (id_ficha)
-2023-02-11 00:57:52.308 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table pieza add constraint FKfl2d4hflh4fh6drhppmq1t022 foreign key (id_odontograma) references odontograma (id_odontograma)
-2023-02-11 00:57:52.361 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario add constraint FKagix3q8yqktlyj3yp1sn0mcd9 foreign key (id_persona) references persona (id_persona)
-2023-02-11 00:57:52.395 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario add constraint FKehtf9w9752mgyxuamu1649laq foreign key (rol_id) references roles (rol_id)
-2023-02-11 00:57:52.427 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol add constraint FK7j1tyvjj1tv8gbq7n6f7efccc foreign key (rol_rol_id) references roles (rol_id)
-2023-02-11 00:57:52.469 DEBUG 13680 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol add constraint FKpcxpmhgrf0w0c8u3pouxaqttw foreign key (usuario_id_usuario) references usuario (id_usuario)
-2023-02-11 00:57:52.505  INFO 13680 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-11 00:57:52.517  INFO 13680 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-11 00:57:53.073  WARN 13680 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-11 00:57:53.375  WARN 13680 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/generate-token']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2023-02-11 00:57:53.376  INFO 13680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/generate-token']
-2023-02-11 00:57:53.376  WARN 13680 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/usuarios/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2023-02-11 00:57:53.376  INFO 13680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/usuarios/']
-2023-02-11 00:57:53.376  WARN 13680 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2023-02-11 00:57:53.377  INFO 13680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/swagger-ui/**']
-2023-02-11 00:57:53.377  WARN 13680 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern=' /v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2023-02-11 00:57:53.377  INFO 13680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern=' /v3/api-docs/**']
-2023-02-11 00:57:53.445  INFO 13680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8eb14a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15f87299, org.springframework.security.web.context.SecurityContextPersistenceFilter@db50222, org.springframework.security.web.header.HeaderWriterFilter@7b5501e3, org.springframework.security.web.csrf.CsrfFilter@78062783, org.springframework.security.web.authentication.logout.LogoutFilter@3bae4a9c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ccb1144, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7a42cbad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e38a01c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@691443f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24e566c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d738d5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb44d00, org.springframework.security.web.session.SessionManagementFilter@4e10e219, org.springframework.security.web.access.ExceptionTranslationFilter@36da16a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4262a69e]
-2023-02-11 00:57:54.431  INFO 13680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-02-11 00:57:54.482  INFO 13680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-02-11 00:57:54.494  INFO 13680 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Started OdontProjectApplication in 6.291 seconds (JVM running for 7.029)
+2023-02-15 09:42:57.021 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists historial_odontograma
+2023-02-15 09:42:57.094 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists odontoficha
+2023-02-15 09:42:57.094 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists odontograma
+2023-02-15 09:42:57.094 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists persona
+2023-02-15 09:42:57.094 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists pieza
+2023-02-15 09:42:57.094 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists roles
+2023-02-15 09:42:57.110 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists usuario
+2023-02-15 09:42:57.110 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : drop table if exists usuario_rol
+2023-02-15 09:42:57.110 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table historial_odontograma (id_historial_odonto bigint not null auto_increment, id_ficha bigint, id_odontograma bigint, primary key (id_historial_odonto)) engine=InnoDB
+2023-02-15 09:42:57.125 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table odontoficha (id_ficha bigint not null auto_increment, diagnostico varchar(100) not null, fecha_consulta datetime(6) not null, motivo_consulta varchar(100) not null, antecedentes varchar(100) not null, id_persona bigint, primary key (id_ficha)) engine=InnoDB
+2023-02-15 09:42:57.157 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table odontograma (id_odontograma bigint not null auto_increment, id_ficha bigint, primary key (id_odontograma)) engine=InnoDB
+2023-02-15 09:42:57.188 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table persona (id_persona bigint not null auto_increment, apellido varchar(45) not null, cedula varchar(10) not null, celular varchar(10) not null, direccion varchar(50) not null, email varchar(50) not null, fecha_nacimiento datetime(6) not null, genero varchar(255) not null, nombre varchar(45) not null, telefono varchar(10) not null, primary key (id_persona)) engine=InnoDB
+2023-02-15 09:42:57.203 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table pieza (id_pieza bigint not null auto_increment, cara_pieza varchar(15) not null, numero_pieza varchar(10) not null, nombre_tratamiento varchar(30) not null, id_odontograma bigint, primary key (id_pieza)) engine=InnoDB
+2023-02-15 09:42:57.219 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table roles (rol_id bigint not null auto_increment, descripcion varchar(255), rol_nombre varchar(255), primary key (rol_id)) engine=InnoDB
+2023-02-15 09:42:57.235 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table usuario (id_usuario bigint not null auto_increment, enabled bit not null, password varchar(255) not null, username varchar(25) not null, id_persona bigint, rol_id bigint, primary key (id_usuario)) engine=InnoDB
+2023-02-15 09:42:57.266 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : create table usuario_rol (usuario_rol_id bigint not null auto_increment, rol_rol_id bigint, usuario_id_usuario bigint, primary key (usuario_rol_id)) engine=InnoDB
+2023-02-15 09:42:57.282 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma add constraint FKk1jimv8lbehrfkqmvdjy5sfup foreign key (id_ficha) references odontoficha (id_ficha)
+2023-02-15 09:42:57.328 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table historial_odontograma add constraint FKcum4rgb5r05qot0m1iuojwrib foreign key (id_odontograma) references odontograma (id_odontograma)
+2023-02-15 09:42:57.375 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table odontoficha add constraint FK87f0p93syqsrsj17lagk3gwl1 foreign key (id_persona) references persona (id_persona)
+2023-02-15 09:42:57.422 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table odontograma add constraint FKimymlpi6ag8bbnx4xbkjo3sir foreign key (id_ficha) references odontoficha (id_ficha)
+2023-02-15 09:42:57.438 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table pieza add constraint FKfl2d4hflh4fh6drhppmq1t022 foreign key (id_odontograma) references odontograma (id_odontograma)
+2023-02-15 09:42:57.485 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario add constraint FKagix3q8yqktlyj3yp1sn0mcd9 foreign key (id_persona) references persona (id_persona)
+2023-02-15 09:42:57.516 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario add constraint FKehtf9w9752mgyxuamu1649laq foreign key (rol_id) references roles (rol_id)
+2023-02-15 09:42:57.532 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol add constraint FK7j1tyvjj1tv8gbq7n6f7efccc foreign key (rol_rol_id) references roles (rol_id)
+2023-02-15 09:42:57.563 DEBUG 9520 --- [restartedMain] org.hibernate.SQL                        : alter table usuario_rol add constraint FKpcxpmhgrf0w0c8u3pouxaqttw foreign key (usuario_id_usuario) references usuario (id_usuario)
+2023-02-15 09:42:57.616  INFO 9520 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-15 09:42:57.626  INFO 9520 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-15 09:42:58.253  WARN 9520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [2E2397513C9B9FDA6009BAD8117157B8]
+2023-02-15 09:42:58.489  WARN 9520 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-15 09:42:58.911  WARN 9520 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/generate-token']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-02-15 09:42:58.911  INFO 9520 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/generate-token']
+2023-02-15 09:42:58.911  WARN 9520 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/usuarios/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-02-15 09:42:58.911  INFO 9520 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/usuarios/']
+2023-02-15 09:42:58.911  WARN 9520 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-02-15 09:42:58.911  INFO 9520 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/swagger-ui/**']
+2023-02-15 09:42:58.911  WARN 9520 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern=' /v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-02-15 09:42:58.911  INFO 9520 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern=' /v3/api-docs/**']
+2023-02-15 09:42:58.974  INFO 9520 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@245c1e47, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71ef5685, org.springframework.security.web.context.SecurityContextPersistenceFilter@578a7609, org.springframework.security.web.header.HeaderWriterFilter@3f90f39e, org.springframework.security.web.csrf.CsrfFilter@552485ed, org.springframework.security.web.authentication.logout.LogoutFilter@543ec3e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ebf20ee, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a647637, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@89b3170, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@392804ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28bebfb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e01317d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e55da6b, org.springframework.security.web.session.SessionManagementFilter@4fc47e3b, org.springframework.security.web.access.ExceptionTranslationFilter@64c06f66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fe8b330]
+2023-02-15 09:43:00.211  INFO 9520 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-15 09:43:00.276  INFO 9520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-15 09:43:00.291  INFO 9520 --- [restartedMain] c.s.o.app.OdontProjectApplication        : Started OdontProjectApplication in 8.537 seconds (JVM running for 10.251)
+2023-02-15 09:46:44.314  INFO 9520 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-15 09:46:44.314  INFO 9520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-15 09:46:44.314  INFO 9520 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-02-15 09:46:44.600 DEBUG 9520 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select usuario0_.id_usuario as col_0_0_ from usuario usuario0_ where usuario0_.username=? limit ?
+2023-02-15 09:46:44.756 DEBUG 9520 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select usuario0_.id_usuario as id_usuar1_6_, usuario0_.enabled as enabled2_6_, usuario0_.password as password3_6_, usuario0_.id_persona as id_perso5_6_, usuario0_.rol_id as rol_id6_6_, usuario0_.username as username4_6_ from usuario usuario0_ where usuario0_.username=?
+2023-02-15 09:46:44.885 DEBUG 9520 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into roles (descripcion, rol_nombre) values (?, ?)
+2023-02-15 09:46:44.938 DEBUG 9520 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into usuario (enabled, password, id_persona, rol_id, username) values (?, ?, ?, ?, ?)
+2023-02-15 09:46:44.954 DEBUG 9520 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into usuario_rol (rol_rol_id, usuario_id_usuario) values (?, ?)
+2023-02-15 09:47:03.739 DEBUG 9520 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select usuario0_.id_usuario as id_usuar1_6_, usuario0_.enabled as enabled2_6_, usuario0_.password as password3_6_, usuario0_.id_persona as id_perso5_6_, usuario0_.rol_id as rol_id6_6_, usuario0_.username as username4_6_ from usuario usuario0_ where usuario0_.username=?
+2023-02-15 09:47:03.755 DEBUG 9520 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select usuariorol0_.usuario_id_usuario as usuario_3_7_0_, usuariorol0_.usuario_rol_id as usuario_1_7_0_, usuariorol0_.usuario_rol_id as usuario_1_7_1_, usuariorol0_.rol_rol_id as rol_rol_2_7_1_, usuariorol0_.usuario_id_usuario as usuario_3_7_1_, rol1_.rol_id as rol_id1_5_2_, rol1_.descripcion as descripc2_5_2_, rol1_.rol_nombre as rol_nomb3_5_2_, usuario2_.id_usuario as id_usuar1_6_3_, usuario2_.enabled as enabled2_6_3_, usuario2_.password as password3_6_3_, usuario2_.id_persona as id_perso5_6_3_, usuario2_.rol_id as rol_id6_6_3_, usuario2_.username as username4_6_3_ from usuario_rol usuariorol0_ left outer join roles rol1_ on usuariorol0_.rol_rol_id=rol1_.rol_id left outer join usuario usuario2_ on rol1_.rol_id=usuario2_.rol_id where usuariorol0_.usuario_id_usuario=?
+2023-02-15 09:47:04.454  INFO 9520 --- [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 554 ms
+2023-02-15 10:22:52.471  WARN 9520 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m24s896ms410µs900ns).
+2023-02-15 10:24:03.092  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-02-15 10:24:03.389  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-15 10:24:03.421  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-15 10:24:03.530  WARN 9520 --- [RMI TCP Connection(32)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-02-15 10:24:03.662  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-15 10:24:03.758  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-15 10:24:03.783 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKk1jimv8lbehrfkqmvdjy5sfup
+2023-02-15 10:24:03.904 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table historial_odontograma drop foreign key FKcum4rgb5r05qot0m1iuojwrib
+2023-02-15 10:24:03.919 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table odontoficha drop foreign key FK87f0p93syqsrsj17lagk3gwl1
+2023-02-15 10:24:03.941 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table odontograma drop foreign key FKimymlpi6ag8bbnx4xbkjo3sir
+2023-02-15 10:24:03.965 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table pieza drop foreign key FKfl2d4hflh4fh6drhppmq1t022
+2023-02-15 10:24:03.987 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table usuario drop foreign key FKagix3q8yqktlyj3yp1sn0mcd9
+2023-02-15 10:24:04.001 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table usuario drop foreign key FKehtf9w9752mgyxuamu1649laq
+2023-02-15 10:24:04.015 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FK7j1tyvjj1tv8gbq7n6f7efccc
+2023-02-15 10:24:04.030 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : alter table usuario_rol drop foreign key FKpcxpmhgrf0w0c8u3pouxaqttw
+2023-02-15 10:24:04.044 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists historial_odontograma
+2023-02-15 10:24:04.063 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists odontoficha
+2023-02-15 10:24:04.067 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists odontograma
+2023-02-15 10:24:04.072 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists persona
+2023-02-15 10:24:04.086 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists pieza
+2023-02-15 10:24:04.091 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists roles
+2023-02-15 10:24:04.095 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists usuario
+2023-02-15 10:24:04.099 DEBUG 9520 --- [RMI TCP Connection(32)-127.0.0.1] org.hibernate.SQL                        : drop table if exists usuario_rol
+2023-02-15 10:24:04.190  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-15 10:24:04.195  INFO 9520 --- [RMI TCP Connection(32)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
