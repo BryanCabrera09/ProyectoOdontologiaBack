@@ -14,8 +14,8 @@ public interface IUsuarioService {
 
 	public void delete(Long id);
 
-	List<Usuario> getUsuarios();
+	public List<Usuario> getUsuarios();
 
-	List<Usuario> buscarUsuario(String cedula);
+	public List<Usuario> buscarUsuario(String cedula);
 
 }
