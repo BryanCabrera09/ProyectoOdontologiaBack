@@ -14,9 +14,7 @@ import com.sm.odontologia.app.service.IUsuarioService;
 import java.util.*;
 
 @RestController
-
 @RequestMapping("/usuarios")
-
 @CrossOrigin("*")
 public class UserController {
 
