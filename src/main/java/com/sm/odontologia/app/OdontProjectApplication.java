@@ -10,9 +10,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@EnableWebMvc
-@Configuration
-
 public class OdontProjectApplication {
 
 	public static void main(String[] args) {

@@ -28,9 +28,9 @@ public class OdontogramaController {
     }
 
     @GetMapping("/buscar/{id}")
-    public ResponseEntity<Odontograma> getById(@PathVariable("id") Long id) {
+    public ResponseEntity <List<Odontograma>> getById(@PathVariable("id") Long id) {
         try {
-            return new ResponseEntity<>(odontogramaService.findById(id), HttpStatus.OK);
+            return new ResponseEntity<>(odontogramaService.buscarOdontograma(id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
