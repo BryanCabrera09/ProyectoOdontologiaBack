@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Setter
@@ -42,6 +43,8 @@ public class Persona implements Serializable {
 	private String email;
 
 	@Column(name = "fecha_nacimiento", nullable = false)
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date fechaNac;
 
 	@Column(name = "genero", nullable = false)

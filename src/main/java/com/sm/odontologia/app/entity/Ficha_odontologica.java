@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -29,6 +30,8 @@ public class Ficha_odontologica implements Serializable {
 	private String diagnostico;
 
 	@Column(name = "fecha_consulta", nullable = false)
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date fecha_consulta;
 
 	@Column(name = "motivo_consulta", length = 100, nullable = false)
