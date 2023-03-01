@@ -1,5 +1,6 @@
 package com.sm.odontologia.app.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,7 @@ public class PiezaController {
 	@PostMapping("/crear")
 	public ResponseEntity<Pieza> crear(@RequestBody Pieza p) {
 		try {
+			p.setFecha_creacion(LocalDateTime.now());
 			return new ResponseEntity<>(piezaService.save(p), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
