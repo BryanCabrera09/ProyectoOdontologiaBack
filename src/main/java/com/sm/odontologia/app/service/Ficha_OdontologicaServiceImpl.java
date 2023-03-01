@@ -19,8 +19,15 @@ public class Ficha_OdontologicaServiceImpl extends GenericServiceImpl<Ficha_odon
         return fichaodontoRepository;
     }
 
-    public List<Ficha_odontologica> buscarFichaOdonto(Long id) {
-        return fichaodontoRepository.buscarFicha(id);
-
+    @Override
+    public Ficha_odontologica buscarFicha(Long id_persona) {
+        return fichaodontoRepository.buscarFicha(id_persona);
     }
+
+//    public List<Ficha_odontologica> buscarFichaOdonto(Long id) {
+//        return fichaodontoRepository.buscarFicha(id);
+//
+//    }
+
+
 }

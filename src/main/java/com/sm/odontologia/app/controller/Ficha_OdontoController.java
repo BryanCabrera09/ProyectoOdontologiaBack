@@ -36,10 +36,20 @@ public class Ficha_OdontoController {
 		}
 	}
 
+	@GetMapping("/buscarF/{id}")
+	public ResponseEntity<Ficha_odontologica>getFichaByID(@PathVariable("id") Long id_persona) {
+		try {
+			return new ResponseEntity<>(ficha_odontologiaService.buscarFicha(id_persona), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 	@PostMapping("/crear")
 	public ResponseEntity<Ficha_odontologica> crear(@RequestBody Ficha_odontologica f) {
 		try {
+			System.out.println(f);
 			return new ResponseEntity<>(ficha_odontologiaService.save(f), HttpStatus.CREATED);
+
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
@@ -59,6 +69,7 @@ public class Ficha_OdontoController {
 	}
 
 	@PutMapping("/actualizar/{id}")
+
 	public ResponseEntity<Ficha_odontologica> actualizarFicha(@PathVariable Long id,
 			@RequestBody Ficha_odontologica f) {
 		Ficha_odontologica fichaOdontologica = ficha_odontologiaService.findById(id);
