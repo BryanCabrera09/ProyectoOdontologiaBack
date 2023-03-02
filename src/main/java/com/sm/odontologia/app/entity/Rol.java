@@ -5,18 +5,23 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-@Table(name = "roles")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Rol {
+@Table(name = "roles")
+public class Rol implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +31,8 @@ public class Rol {
 
 	private String descripcion;
 
+	@JsonIgnore
 	@OneToOne(mappedBy = "rol")
 	private Usuario usuario;
-
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "rol")
-	private Set<UsuarioRol> usuarioRoles = new HashSet<>();
 
 }

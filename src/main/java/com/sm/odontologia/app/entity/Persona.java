@@ -65,9 +65,9 @@ public class Persona implements Serializable {
 	@OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Ficha_odontologica> ficha_odontologica = new ArrayList<>();
-//
-//	@JsonIgnore
-//	@OneToOne(mappedBy = "persona")
-//	private Usuario usuario;
+
+	@JsonIgnore
+	@OneToOne(mappedBy = "persona")
+	private Usuario usuario;
 
 }
