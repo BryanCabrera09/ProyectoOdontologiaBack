@@ -32,9 +32,6 @@ public class Odontograma implements Serializable {
 	@JoinColumn(name = "id_ficha", referencedColumnName = "id_ficha")
 	private Ficha_odontologica fichaOdontologica;
 
-    @ManyToOne
-    @JoinColumn(name = "id_ficha", referencedColumnName = "id_ficha")
-    private Ficha_odontologica fichaOdontologica;
 
     @JsonIgnore
     @OneToMany(mappedBy = "odontograma")
