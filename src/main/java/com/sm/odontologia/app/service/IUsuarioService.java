@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.sm.odontologia.app.entity.Usuario;
 
-public interface IUsuarioService {
+public interface IUsuarioService extends IGenericService<Usuario, Long> {
 
 	public Usuario save(Usuario usuario);
 
