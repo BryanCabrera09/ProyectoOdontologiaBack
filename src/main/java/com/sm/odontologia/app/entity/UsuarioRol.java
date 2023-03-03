@@ -19,6 +19,10 @@ public class UsuarioRol {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long usuarioRolId;
 
+
+
+
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Usuario usuario;
 

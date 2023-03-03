@@ -55,16 +55,18 @@ public class Ficha_OdontoController {
 		}
 	}
 
-	@DeleteMapping("/eliminar/{id}")
-	public ResponseEntity<?> eliminar(@PathVariable Long id) {
-
-		try {
-			ficha_odontologiaService.delete(id);
-			return new ResponseEntity<>(HttpStatus.OK);
-		} catch (DataIntegrityViolationException e) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error al eliminar la ficha");
-		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+	@PutMapping("/eliminar/{id}")
+	public ResponseEntity<?> eliminar(@PathVariable Long id, @RequestBody Ficha_odontologica f) {
+		Ficha_odontologica fichaOdontologica = ficha_odontologiaService.findById(id);
+		if (fichaOdontologica == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else {
+			try {
+				fichaOdontologica.setHabilitado(f.isHabilitado());
+				return new ResponseEntity<>(ficha_odontologiaService.save(fichaOdontologica), HttpStatus.CREATED);
+			} catch (Exception e) {
+				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			}
 		}
 	}
 

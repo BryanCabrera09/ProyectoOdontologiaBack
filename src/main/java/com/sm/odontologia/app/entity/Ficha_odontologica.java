@@ -39,6 +39,8 @@ public class Ficha_odontologica implements Serializable {
 
 	@Column(name = "observaciones", length = 100, nullable = false)
 	private String observaciones;
+	@Column(name = "habilitado", nullable = false)
+	private boolean habilitado;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "fichaOdontologica")
