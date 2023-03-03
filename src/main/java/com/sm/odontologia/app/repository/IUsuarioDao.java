@@ -21,4 +21,8 @@ public interface IUsuarioDao extends CrudRepository<Usuario, Long> {
 
 	public boolean existsByPassword(String password);
 
+	@Query(value = "Select u.username, p.cedula,p.nombre, p.apellido, u.enabled, u.id_usuario, u.password, u.id_persona, u.rol_id, r.rol_nombre from usuario u join persona p on u.id_persona = p.id_persona join roles r on u.rol_id = r.rol_id", nativeQuery = true)
+	List<Usuario>listarUsuario();
+
+
 }

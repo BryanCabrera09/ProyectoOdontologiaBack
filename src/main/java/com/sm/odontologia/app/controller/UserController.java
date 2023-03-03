@@ -29,6 +29,12 @@ public class UserController {
 		return ResponseEntity.ok().body(usuarioService.getUsuarios());
 	}
 
+	@GetMapping("/users/list")
+	public ResponseEntity<List<Usuario>> getUsuariosList() {
+
+		return ResponseEntity.ok().body(usuarioService.listarUsuario());
+	}
+
 	@GetMapping("/search/{username}")
 	public Usuario obtenerUsuario(@PathVariable("username") String username) {
 
