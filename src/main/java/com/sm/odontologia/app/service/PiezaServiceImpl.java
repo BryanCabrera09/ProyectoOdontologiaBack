@@ -23,4 +23,9 @@ public class PiezaServiceImpl extends GenericServiceImpl<Pieza, Long> implements
 	public List<Pieza> buscarPieza(Long id) {
 		return piezaRepository.buscarPieza(id);
 	}
+
+	@Override
+	public List<Pieza> listarPiezas() {
+		return piezaRepository.buscarPiezas();
+	}
 }

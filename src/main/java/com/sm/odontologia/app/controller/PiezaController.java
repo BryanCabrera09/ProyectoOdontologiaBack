@@ -1,5 +1,7 @@
 package com.sm.odontologia.app.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +38,15 @@ public class PiezaController {
 		}
 	}
 
+	@GetMapping("/listarP")
+	public ResponseEntity<List<Pieza>> obtenerListaConcat() {
+		try {
+			return new ResponseEntity<>(piezaService.listarPiezas(), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Pieza> getById(@PathVariable("id") Long id) {
 		try {
@@ -48,6 +59,7 @@ public class PiezaController {
 	@PostMapping("/crear")
 	public ResponseEntity<Pieza> crear(@RequestBody Pieza p) {
 		try {
+			p.setFecha_creacion(LocalDateTime.now());
 			return new ResponseEntity<>(piezaService.save(p), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
