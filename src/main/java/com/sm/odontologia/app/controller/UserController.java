@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import com.sm.odontologia.app.entity.Persona;
 import com.sm.odontologia.app.entity.Usuario;
 import com.sm.odontologia.app.repository.IUsuarioDao;
 import com.sm.odontologia.app.service.IUsuarioService;
@@ -65,14 +64,14 @@ public class UserController {
 	}
 
 	@PostMapping("/signin")
-	public ResponseEntity<?> IniciarSesion(@RequestBody Usuario usuario) throws Exception {
+	public Usuario IniciarSesion(@RequestBody Usuario usuario) throws Exception {
 		// COMPROBAR SI sEXISTE EL NOMBRE DE USUARIO EN NUESTRA BD..
 		if (userRepository.existsByUsername(usuario.getUsername())) {
 
 			// COMPROBAR SI CONINCIDE USUARIO Y CONTRASEÑA EN NUESTRA BD..
 			if (userRepository.existsByPassword(usuario.getPassword())) {
 
-				return null;
+				return usuarioService.search(usuario.getUsername());
 
 			} else {
 

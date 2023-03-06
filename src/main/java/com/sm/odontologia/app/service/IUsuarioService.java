@@ -8,7 +8,7 @@ public interface IUsuarioService extends IGenericService<Usuario, Long> {
 
 	public Usuario save(Usuario usuario);
 
-	public Usuario search(String cedula);
+	public Usuario search(String username);
 
 	public void delete(Long id);
 
@@ -17,7 +17,5 @@ public interface IUsuarioService extends IGenericService<Usuario, Long> {
 	public List<Usuario> buscarUsuario(String cedula);
 
 	public List<Usuario> listarUsuario();
-
-
 
 }

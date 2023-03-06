@@ -18,18 +18,6 @@ public class UsuarioServiceImpl extends GenericServiceImpl<Usuario, Long> implem
 	private IUsuarioDao UsuarioDao;
 
 	@Override
-	public Usuario save(Usuario usuario) {
-		Usuario usuarioLocal = UsuarioDao.findByUsername(usuario.getUsername());
-		if (usuarioLocal != null) {
-			System.out.println("El usuario ya existe");
-		} else {
-
-			usuarioLocal = UsuarioDao.save(usuario);
-		}
-		return usuarioLocal;
-	}
-
-	@Override
 	@Transactional(readOnly = true)
 	public Usuario search(String username) {
 		return UsuarioDao.findByUsername(username);
