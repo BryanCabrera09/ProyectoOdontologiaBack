@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import com.sm.odontologia.app.entity.Persona;
 import com.sm.odontologia.app.repository.IPersonaDao;
 
+import java.util.List;
+
 @Service
 public class PersonaServiceImpl extends GenericServiceImpl<Persona, Long> implements IPersonaService {
 
@@ -26,5 +28,10 @@ public class PersonaServiceImpl extends GenericServiceImpl<Persona, Long> implem
 	public Persona search(String cedula) {
 		
 		return personaRepository.findByCedula(cedula);
+	}
+
+	@Override
+	public List<Persona> listar() {
+		return personaRepository.listarPacientes();
 	}
 }

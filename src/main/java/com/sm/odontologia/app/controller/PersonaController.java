@@ -36,6 +36,14 @@ public class PersonaController {
 		}
 	}
 
+	@GetMapping("/listarP")
+	public ResponseEntity<List<Persona>> obtenerPacientes() {
+		try {
+			return new ResponseEntity<>(personaService.listar(), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Persona> getById(@PathVariable("id") Long id) {
 		try {
