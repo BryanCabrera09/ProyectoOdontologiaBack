@@ -73,7 +73,7 @@ public class PiezaController {
 			piezaService.delete(id);
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (DataIntegrityViolationException e) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error al elminar la Pieza");
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error al eliminar la Pieza");
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
