@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -68,7 +69,7 @@ public class Persona implements Serializable {
 	private List<Ficha_odontologica> ficha_odontologica = new ArrayList<>();
 
 	@JsonIgnore
-	@OneToOne(mappedBy = "persona")
-	private Usuario usuario;
+	@OneToMany(mappedBy = "persona")
+	private List<Usuario> usuario;
 
 }

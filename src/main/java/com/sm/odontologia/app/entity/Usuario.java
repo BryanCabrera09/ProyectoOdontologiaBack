@@ -1,5 +1,6 @@
 package com.sm.odontologia.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,12 +32,14 @@ public class Usuario implements Serializable {
 
 	private boolean enabled = true;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_persona")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Persona persona;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "rolId")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Rol rol;
 
 }

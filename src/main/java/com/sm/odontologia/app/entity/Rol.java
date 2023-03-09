@@ -1,11 +1,13 @@
 package com.sm.odontologia.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -30,7 +32,7 @@ public class Rol implements Serializable {
 	private String descripcion;
 
 	@JsonIgnore
-	@OneToOne(mappedBy = "rol")
-	private Usuario usuario;
+	@OneToMany(mappedBy = "rol")
+	private List<Usuario> usuario;
 
 }
