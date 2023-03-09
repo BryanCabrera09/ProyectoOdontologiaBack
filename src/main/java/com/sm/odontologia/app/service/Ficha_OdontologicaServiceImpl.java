@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class Ficha_OdontologicaServiceImpl extends GenericServiceImpl<Ficha_odontologica, Long> implements IFicha_OdontologiaService {
 
@@ -22,6 +24,10 @@ public class Ficha_OdontologicaServiceImpl extends GenericServiceImpl<Ficha_odon
         return fichaodontoRepository.buscarFicha(id_persona);
     }
 
+    @Override
+    public List<Ficha_odontologica> buscarFichaList(Long id_persona) {
+        return fichaodontoRepository.buscarFichaList(id_persona);
+    }
 
 
 }

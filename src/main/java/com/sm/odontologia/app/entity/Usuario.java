@@ -31,7 +31,7 @@ public class Usuario implements Serializable {
 
 	private boolean enabled = true;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_persona")
 	private Persona persona;
 
