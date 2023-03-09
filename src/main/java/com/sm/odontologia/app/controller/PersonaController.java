@@ -44,6 +44,7 @@ public class PersonaController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Persona> getById(@PathVariable("id") Long id) {
 		try {
@@ -53,7 +54,7 @@ public class PersonaController {
 		}
 	}
 
-	@GetMapping("/buscar/{cedula}")
+	@GetMapping("/buscarcedul/{cedula}")
 	public Persona obtenerUsuario(@PathVariable("cedula") String cedula) {
 		return personaService.search(cedula);
 	}
