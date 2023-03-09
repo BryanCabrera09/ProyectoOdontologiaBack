@@ -60,7 +60,8 @@ public class Persona implements Serializable {
 	@Size(min = 9, max = 10, message = "Telefono longitud maxima permitida 10 caracteres")
 	@Column(name = "telefono", nullable = false)
 	private String telefono;
-
+	
+	private boolean enabled = true;
 
 	@OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
 	@JsonIgnore
