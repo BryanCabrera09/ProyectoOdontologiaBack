@@ -2,6 +2,7 @@ package com.sm.odontologia.app.controller;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,14 @@ public class PiezaController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	@GetMapping("/listarID/{id_persona}")
+	public ResponseEntity<List<Pieza>> getListbyID(@PathVariable("id_persona")  Long id_persona) {
+		try {
+			return new ResponseEntity<>(piezaService.buscarPiezasByIDPersona(id_persona), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Pieza> getById(@PathVariable("id") Long id) {
@@ -59,7 +68,7 @@ public class PiezaController {
 	@PostMapping("/crear")
 	public ResponseEntity<Pieza> crear(@RequestBody Pieza p) {
 		try {
-			p.setFecha_creacion(LocalDateTime.now());
+			p.setFecha_creacion(Calendar.getInstance());
 			return new ResponseEntity<>(piezaService.save(p), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -2,6 +2,7 @@ package com.sm.odontologia.app.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.*;
 
@@ -36,7 +37,7 @@ public class Pieza implements Serializable {
 
 	@Column(name = "fecha_consulta")
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-	private LocalDateTime fecha_creacion;
+	private Calendar fecha_creacion;
 
 	@ManyToOne
 	@JoinColumn(name = "id_odontograma", referencedColumnName = "id_odontograma")

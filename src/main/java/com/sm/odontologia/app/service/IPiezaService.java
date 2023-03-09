@@ -8,4 +8,5 @@ public interface IPiezaService extends IGenericService<Pieza, Long> {
 
     List<Pieza>listarPiezas();
 
+    List<Pieza>buscarPiezasByIDPersona(Long id_persona);
 }
