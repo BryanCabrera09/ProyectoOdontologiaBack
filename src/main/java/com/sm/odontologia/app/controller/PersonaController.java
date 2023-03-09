@@ -44,7 +44,7 @@ public class PersonaController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
+
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Persona> getById(@PathVariable("id") Long id) {
 		try {
@@ -96,6 +96,7 @@ public class PersonaController {
 				persona.setCelular(p.getCelular());
 				persona.setDireccion(p.getDireccion());
 				persona.setTelefono(p.getTelefono());
+				persona.setEnabled(p.isEnabled());
 				return new ResponseEntity<>(personaService.save(persona), HttpStatus.CREATED);
 			} catch (Exception e) {
 				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
