@@ -57,25 +57,4 @@ public class Historial_OdonController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-/*
-    @PutMapping("/actualizar/{id}")
-    public ResponseEntity<Odontograma> actualizarOdontograma(@PathVariable Long id, @RequestBody Odontograma o) {
-        Odontograma odontograma = odontogramaService.findById(id);
-        if (odontograma == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        } else {
-            try {
-                odontograma.setDiagnostico(f.getDiagnostico());
-                odontograma.setObservaciones(f.getObservaciones());
-                odontograma.setFecha_consulta(f.getFecha_consulta());
-                odontograma.setMotivo_consulta(f.getMotivo_consulta());
-                odontograma.setAntecedentes(f.getAntecedentes());
-                odontograma.setExamenes(f.getExamenes());
-                return new ResponseEntity<>(odontogramaService.save(odontograma), HttpStatus.CREATED);
-            } catch (Exception e) {
-                return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-            }
-
-        }
-    }*/
 }
