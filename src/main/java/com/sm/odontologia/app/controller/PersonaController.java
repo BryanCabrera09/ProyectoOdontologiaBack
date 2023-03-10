@@ -91,7 +91,6 @@ public class PersonaController {
 				persona.setNombre(p.getNombre());
 				persona.setApellido(p.getApellido());
 				persona.setEmail(p.getEmail());
-				persona.setFechaNac(p.getFechaNac());
 				persona.setGenero(p.getGenero());
 				persona.setCelular(p.getCelular());
 				persona.setDireccion(p.getDireccion());
