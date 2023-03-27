@@ -69,7 +69,7 @@ public class Persona implements Serializable {
 	private List<Ficha_odontologica> ficha_odontologica = new ArrayList<>();
 
 	@JsonIgnore
-	@OneToMany(mappedBy = "persona")
-	private List<Usuario> usuario;
+	@OneToOne(mappedBy = "persona")
+	private Usuario usuario;
 
 }

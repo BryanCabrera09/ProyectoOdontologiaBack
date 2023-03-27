@@ -32,14 +32,12 @@ public class Usuario implements Serializable {
 
 	private boolean enabled = true;
 
-	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@ManyToOne()
 	@JoinColumn(name = "id_persona")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Persona persona;
 
 	@ManyToOne
 	@JoinColumn(name = "rolId")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Rol rol;
 
 }
